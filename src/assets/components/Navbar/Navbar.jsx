@@ -1,31 +1,30 @@
 import Switcher from '../Switcher/Switcher';
+import logo from '../../img/dk-logo-remove.png'
 
 function Navbar() {
   return (
     <nav className="not-prose container flex max-w-5xl justify-between p-3 lg:px-5 xl:max-w-7xl">
       <a
-        className="flex h-12 w-16 items-center justify-center font-fontLogo text-2xl bg-gradient-to-r from-indigo-800 to-violet-600 bg-clip-text text-transparent md:ml-3 lg:text-4xl "
+        className="flex h-12 w-16 xl:scale-125 items-center justify-center md:ml-3 lg:text-4xl "
         href="/">
-        {/* <img id="logo" src="/img/logo.svg" alt="logo" /> */}
-        dk
+        <img id="logo" src={logo} alt="logo" />
       </a>
       <ul className="flex items-center">
-        <li className="h-full leading-[48px] text-gray-800 transition hover:text-gray-700 dark:text-gray-300 dark:hover:text-white">
+        {/* <li className="h-full leading-[48px] text-gray-800 transition hover:text-gray-700 dark:text-gray-300 dark:hover:text-white">
           <a href="#sluzby" className="text-lg font-bold leading-none">
             služby
           </a>
-        </li>
-        <li className="group relative mx-2 h-full leading-[48px] text-gray-800  transition hover:bg-gradient-to-r hover:from-indigo-800 hover:to-violet-600 hover:bg-clip-text hover:text-transparent dark:text-gray-300 dark:transition dark:hover:bg-gradient-to-r dark:hover:from-indigo-800 dark:hover:to-violet-600 dark:hover:bg-clip-text dark:hover:text-transparent md:mx-4">
+        </li> */}
+        <li className="group relative top-1 mx-2 h-full leading-[48px] text-gray-800 transition hover:bg-gradient-to-r hover:from-violet-600 hover:to-indigo-800 hover:bg-clip-text hover:text-transparent dark:text-gray-300 dark:transition dark:hover:bg-gradient-to-r dark:hover:from-indigo-800 dark:hover:to-violet-600 dark:hover:bg-clip-text dark:hover:text-transparent md:mx-4">
           <a
-            data-popover-target="popover-no-arrow"
             href="#kontakt"
-            className="text-lg font-bold leading-none ">
+            className="text-lg xl:text-xl font-bold">
             kontakt
           </a>
-          <div class=" absolute right-0 top-10 z-10 hidden w-64 max-w-max rounded-lg border border-indigo-700 py-3 px-5 text-sm  opacity-0 transition-opacity duration-300 group-hover:block group-hover:opacity-100 dark:bg-transparent dark:text-gray-400">
+          <div className=" absolute right-0 top-10 z-10 hidden w-64 max-w-max rounded-lg border border-indigo-700 py-3 px-5 text-sm  opacity-0 transition-opacity duration-300 group-hover:block group-hover:opacity-100 dark:bg-transparent dark:text-gray-400">
             <div className="mb-2 flex">
               <svg
-                class="mr-2 h-5 w-5 text-indigo-700"
+                className="mr-2 h-5 w-5 text-indigo-700"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -33,13 +32,13 @@ function Navbar() {
               </svg>
               <a
                 href="tel:+420606909527"
-                class="text-slate-900 hover:text-indigo-800 dark:text-gray-300 dark:hover:text-white">
+                className="text-slate-900 hover:text-indigo-800 dark:text-gray-300 dark:hover:text-white">
                 +420 606 909 527
               </a>
             </div>
             <div className="flex">
               <svg
-                class="mr-2 h-5 w-5 text-indigo-700"
+                className="mr-2 h-5 w-5 text-indigo-700"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
@@ -48,13 +47,13 @@ function Navbar() {
               </svg>
               <a
                 href="mailto:info@kolarsky.eu"
-                class="text-slate-900 hover:text-indigo-800 dark:text-gray-300 dark:hover:text-white">
+                className="text-slate-900 hover:text-indigo-800 dark:text-gray-300 dark:hover:text-white">
                 hello@kolarsky.eu
               </a>
             </div>
           </div>
         </li>
-        <li className="relative ml-2 animate-wiggle rounded-full p-1 duration-300 dark:animate-pulse dark:bg-gray-300/10 hover:dark:bg-gray-300/20 md:mr-3">
+        <li className="relative ml-2 dark:animate-wiggle rounded-full p-1 duration-300 animate-pulse bg-gray-300/70 hover:bg-gray-300 dark:bg-transparent dark:hover:bg-gray-300/20 md:mr-3">
           <Switcher className="hover:text-amber-600" />
         </li>
       </ul>

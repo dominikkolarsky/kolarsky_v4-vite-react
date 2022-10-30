@@ -4,13 +4,13 @@ function Contact() {
   return (
     <section
       id="kontakt"
-      class="mx-auto mt-[10vh] grid items-center justify-center gap-y-10 md:gap-10 pb-40 text-center sm:grid-cols-2 lg:text-left">
+      className="mx-auto mt-[10vh] grid items-center justify-center gap-y-10 md:gap-10 mb-36 text-center sm:grid-cols-2 lg:text-left">
       <div className=" sm:mr-5 md:mr-10 mb-auto not-prose">
         <h3 className="text-center sm:text-end mb-4 font-medium text-2xl lg:text-3xl">Pošli mi nezávaznou poptávku</h3>
-        <div class="not-prose mx-auto sm:mx-0 sm:ml-auto max-w-xs rounded-lg border border-indigo-700 py-4 px-6 text-sm dark:bg-transparent dark:text-gray-400 md:text-base lg:text-xl">
-          <div className="mb-2 flex items-center justify-end">
+        <div className="not-prose mx-auto sm:mx-0 sm:ml-auto max-w-xs rounded-lg border border-indigo-700 py-4 px-6 text-sm dark:bg-transparent dark:text-gray-400 md:text-base lg:text-xl">
+          <div className="mb-2 flex items-center justify-center sm:justify-end">
             <svg
-              class="mr-2 h-5 text-indigo-700 lg:mr-4 lg:h-7"
+              className="mr-2 h-5 text-indigo-700 lg:mr-4 lg:h-7"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg">
@@ -18,13 +18,13 @@ function Contact() {
             </svg>
             <a
               href="tel:+420606909527"
-              class="text-slate-900 hover:text-indigo-800 dark:text-gray-300 dark:hover:text-white">
+              className="text-slate-900 hover:text-indigo-800 dark:text-gray-300 dark:hover:text-white">
               +420 606 909 527
             </a>
           </div>
-          <div className="flex items-center justify-end">
+          <div className="flex items-center justify-center sm:justify-end">
             <svg
-              class="mr-2 h-5 text-indigo-700 lg:mr-4 lg:h-7"
+              className="mr-2 h-5 text-indigo-700 lg:mr-4 lg:h-7"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@ function Contact() {
             </svg>
             <a
               href="mailto:info@kolarsky.eu"
-              class="text-slate-900 hover:text-indigo-800 dark:text-gray-300 dark:hover:text-white">
+              className="text-slate-900 hover:text-indigo-800 dark:text-gray-300 dark:hover:text-white">
               hello@kolarsky.eu
             </a>
           </div>

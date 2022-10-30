@@ -6,7 +6,7 @@ function Switcher() {
 
     
 const [colorTheme, setColorTheme] = useDarkSide()
-const [darkSide, setDarkSide]  = useState(colorTheme === 'light' ? true : false)
+const [darkSide, setDarkSide]  = useState(colorTheme === 'light' ? false : true)
 
 const toggleDarkMode = (checked) => {
     setColorTheme(colorTheme)

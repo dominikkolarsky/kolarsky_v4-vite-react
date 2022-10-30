@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 
 function ContactForm() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_uycvnr4', 'contact_form', form.current, 'QP66USYry_JNx20MA')
+      .then((result) => {
+          console.log(result.text);
+          document.getElementById("form").reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
-    <form className="grid max-w-md grid-cols-2 gap-4">
-      <div class="relative col-span-2 sm:col-span-1">
-        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+    <form id="form" ref={form} onSubmit={sendEmail} className="grid max-w-md grid-cols-2 gap-4">
+      <div className="relative col-span-2 sm:col-span-1">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
           <svg
-            class="h-5 w-5 text-indigo-700"
+            className="h-5 w-5 text-indigo-700"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg">
@@ -18,16 +34,17 @@ function ContactForm() {
         </div>
         <input
           type="text"
-          class="block w-full rounded-xl border-0 bg-indigo-700/5 p-2.5 pl-10 text-sm text-slate-900  focus:ring-indigo-800 dark:bg-indigo-300/5 dark:text-white dark:placeholder-gray-400 dark:focus:ring-indigo-800"
+          className="block w-full rounded-xl border-0 bg-indigo-700/5 p-2.5 pl-10 text-sm text-slate-900  focus:ring-indigo-800 dark:bg-indigo-300/5 dark:text-white dark:placeholder-gray-400 dark:focus:ring-indigo-800"
           placeholder="Tvé jméno"
+          name="user_name"
           required
         />
       </div>
-      <div class="relative col-span-2 sm:col-span-1">
-        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+      <div className="relative col-span-2 sm:col-span-1">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
           <svg
             aria-hidden="true"
-            class="h-5 w-5 text-indigo-700"
+            className="h-5 w-5 text-indigo-700"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg">
@@ -37,15 +54,16 @@ function ContactForm() {
         </div>
         <input
           type="email"
-          class="block w-full rounded-xl border-0 bg-indigo-700/5 p-2.5 pl-10 text-sm text-slate-900  focus:ring-indigo-800 dark:bg-indigo-300/5 dark:text-white dark:placeholder-gray-400 dark:focus:ring-indigo-800"
+          className="block w-full rounded-xl border-0 bg-indigo-700/5 p-2.5 pl-10 text-sm text-slate-900  focus:ring-indigo-800 dark:bg-indigo-300/5 dark:text-white dark:placeholder-gray-400 dark:focus:ring-indigo-800"
           placeholder="tvůj@email.cz"
+          name="user_email"
           required
         />
       </div>
-      <div class="relative col-span-2">
-        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+      <div className="relative col-span-2">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
           <svg
-            class="h-5 w-5 text-indigo-700"
+            className="h-5 w-5 text-indigo-700"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg">
@@ -54,21 +72,24 @@ function ContactForm() {
         </div>
         <input
           type="text"
-          class="block w-full rounded-xl border-0 bg-indigo-700/5 p-2.5 pl-10 text-sm text-slate-900  focus:ring-indigo-800 dark:bg-indigo-300/5 dark:text-white dark:placeholder-gray-400 dark:focus:ring-indigo-800"
+          className="block w-full rounded-xl border-0 bg-indigo-700/5 p-2.5 pl-10 text-sm text-slate-900  focus:ring-indigo-800 dark:bg-indigo-300/5 dark:text-white dark:placeholder-gray-400 dark:focus:ring-indigo-800"
           placeholder="Co budeme tvořit?"
+          name="topic"
           required
         />
       </div>
 
       <textarea
         rows="4"
-        class="col-span-2 w-full rounded-xl border-0 bg-indigo-700/5 p-2.5 px-3 text-sm text-slate-900  focus:ring-indigo-800 dark:bg-indigo-300/5 dark:text-white dark:placeholder-gray-400 dark:focus:ring-indigo-800"
-        placeholder="Zpráva, pro mě..."
+        className="col-span-2 w-full rounded-xl border-0 bg-indigo-700/5 p-2.5 px-3 text-sm text-slate-900  focus:ring-indigo-800 dark:bg-indigo-300/5 dark:text-white dark:placeholder-gray-400 dark:focus:ring-indigo-800"
+        placeholder="Zpráva pro mě..."
+        name="message"
         required></textarea>
       <button
         type="submit"
-        className="col-start-2 flex items-center justify-center gap-2 rounded-full border-2 border-indigo-900 p-2 text-sm transition-all duration-300 dark:hover:bg-indigo-800/60 dark:hover:shadow-md dark:hover:shadow-indigo-900/20 lg:mx-0">
-        <span className="text-black dark:text-white">Poslat zprávu</span>
+        value=''
+        className="col-span-2 place-self-center sm:place-self-end w-[14rem] rounded-full border-2 border-indigo-900 p-2 text-sm transition-all duration-300 dark:hover:bg-indigo-800/60 dark:hover:shadow-md dark:hover:shadow-indigo-900/20 lg:mx-0 hover:bg-indigo-800/10 hover:border-indigo-800/5 hover:text-indigo-900 dark:hover:text-indigo-50">
+          Poslat zprávu
       </button>
     </form>
   );
