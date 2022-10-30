@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-image: linear-gradient(176deg, #e7e7e7 0%, #d6d6d6 100%);
+  background-image: linear-gradient(176deg, #e7e7e7 0%, #c5c5c5 100%);
   background-attachment: fixed;
   font-family: 'Poppins', sans-serif;
 }
@@ -36,7 +36,7 @@ html {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  width: 110%;
+  width: 100%;
   height: 50%;
   -webkit-filter: blur(80px);
   filter: blur(80px);
@@ -49,3 +49,6 @@ html {
   background: radial-gradient(circle at 50% 50%, #444bf7, #444bf700);
 }
 
+textarea {
+  resize: none;
+}
