@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: linear-gradient(176deg, #e7e7e7 0%, #d6d6d6 100%);
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dark body {
+  background: linear-gradient(
+    175deg,
+    rgb(18, 24, 27) 50%,
+    rgb(32, 39, 55) 100%
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.check-green {
+  background-image: url(/img/check-green.svg);
+  background-size: 16px;
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-left: 1.5rem;
+}
+
+.shadow1 {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 50%;
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  background: radial-gradient(circle at 50% 50%, #000000, #444bf700);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.dark .shadow1 {
+  background: radial-gradient(circle at 50% 50%, #444bf7, #444bf700);
+}
+
