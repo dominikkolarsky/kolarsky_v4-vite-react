@@ -82,7 +82,7 @@ function ContactForm() {
       <textarea
         rows="4"
         className="col-span-2 w-full rounded-xl border-0 bg-indigo-700/5 p-2.5 px-3 text-sm text-slate-900  focus:ring-indigo-800 dark:bg-indigo-300/5 dark:text-white dark:placeholder-gray-400 dark:focus:ring-indigo-800"
-        placeholder="Zpráva pro mě..."
+        placeholder="Ahoj Dominiku, potřebuji..."
         name="message"
         required></textarea>
       <button

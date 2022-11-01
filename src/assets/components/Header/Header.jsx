@@ -7,11 +7,11 @@ function Header() {
         <h1 class="mb-4 mt-16 text-3xl font-extrabold text-slate-800 dark:text-gray-300 md:text-4xl xl:text-5xl max-w-2xl mx-auto">
           {' '}
           Dělám co mě baví, <br></br> tvořím{' '}
-          <span class="bg-gradient-to-r from-violet-600 to-indigo-800 bg-clip-text text-transparent">
+          <span class="bg-gradient-to-br from-violet-600 to-indigo-800 bg-clip-text text-transparent">
             moderní
           </span>{' '}
           webové stránky na míru. Ukaž světu,{' '}
-          <span class="bg-gradient-to-r from-red-900 to-orange-600 bg-clip-text text-transparent dark:from-red-800 dark:to-orange-500">
+          <span class="bg-gradient-to-br from-violet-600 to-indigo-800 bg-clip-text text-transparent">
             co&nbsp;baví tebe
           </span>
           .

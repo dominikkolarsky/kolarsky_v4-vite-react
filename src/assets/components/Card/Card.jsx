@@ -1,8 +1,8 @@
-function Card() {
+function Card({data}) {
   return (
     <div className="w-full max-w-xs lg:max-w-sm rounded-lg border bg-white p-4 shadow-md dark:border-gray-700 dark:bg-gray-800 sm:p-8 lg:col-span-1">
       <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
-        Standard plan
+        {data.serviceName}
       </h5>
       <div className="flex items-baseline text-gray-900 dark:text-white">
         <span className="text-3xl font-semibold">$</span>

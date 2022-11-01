@@ -28,6 +28,14 @@ html {
   padding-left: 1.5rem;
 }
 
+.heading-gradiente {
+    background: radial-gradient(144.81% 107.75% at 4.86%,at 100.2%,#4140fe 0,#5f07ef 51.48%,#7802ee 100%);
+    background: radial-gradient(144.81% 107.75% at 4.86% 100.2%,#4140fe 0,#5f07ef 51.48%,#7802ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+}
+
 .shadow1 {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
