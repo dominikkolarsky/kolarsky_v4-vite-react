@@ -18,7 +18,7 @@ function Header() {
         </h1>
         <a
           href="#kontakt"
-          className="mx-auto mt-10 flex h-[50px] max-w-xs items-center justify-center gap-2 rounded-full border-2 border-indigo-900 transition-all duration-300 hover:scale-[.98] hover:border lg:mx-0">
+          className="dark:hover:bg-indigo-800/60 hover:bg-indigo-900/10 mx-auto mt-10 flex h-[50px] max-w-xs items-center justify-center gap-2 rounded-full border-2 border-indigo-900 transition-all duration-300 hover:scale-[.98] hover:border lg:mx-0">
           <span className="text-black dark:text-white">Poslat poptávku</span>
           <svg
             class="h-6 w-6 animate-pulse"

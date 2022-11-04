@@ -1,8 +1,7 @@
 export const textData = [
     {
-        serviceName: 'Měsíční pronájem',
+        serviceName: 'Web na pronájem',
         price: 990,
-
     },
     {}
 ]

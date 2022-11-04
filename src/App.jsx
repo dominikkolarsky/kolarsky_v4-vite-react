@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <main className="container prose prose-slate mx-auto max-w-5xl px-4 dark:prose-invert lg:prose-2xl xl:max-w-7xl">
         <Header />
-        <Service />
+        {/* <Service /> */}
         <Contact />
         <Footer/>
       </main>
